@@ -1,7 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   text-align: center;
 }
 
@@ -11,9 +17,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -22,6 +30,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,4 +48,45 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+
+/* My CSS */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  border: 1px solid #00000050;
+}
+
+.sidebar {
+  background-color: #AA00EA;
+  width: 25%;
+  min-width: 320px;
+  border-right: 1px solid #00000050;
+}
+
+.main-content {
+  background-color: white;
+  flex-grow: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+    /* Stack vertically on small screens */
+  }
+
+  .sidebar {
+    width: 100%;
+    /* Full width on small screens */
+    min-width: none;
+    /* Remove min-width */
+  }
+
+  .main-content {
+    width: 100%;
+    /* Full width on small screens */
+  }
 }

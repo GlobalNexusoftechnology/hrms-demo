@@ -4,14 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 import ReactQueryProvider from "./api/config/react-query/react-query.provider.tsx";
 import { DataStoreProvider } from "./context/DataStore.provider.tsx";
 import "./index.css";
-import { Approutes } from "./routes/Approutes.tsx";
+import { AppRoutes } from "./routes/app-routes.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter>
       <ReactQueryProvider>
         <DataStoreProvider>
-          <Approutes />
+          <AppRoutes />
         </DataStoreProvider>
       </ReactQueryProvider>
     </BrowserRouter>
